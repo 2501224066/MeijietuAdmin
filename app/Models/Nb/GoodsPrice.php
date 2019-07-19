@@ -27,6 +27,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice wherePriceclassifyId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice wherePriceclassifyName($value)
  * @mixin \Eloquent
+ * @property string $tag 标记
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice whereTag($value)
  */
 class GoodsPrice extends Model
 {

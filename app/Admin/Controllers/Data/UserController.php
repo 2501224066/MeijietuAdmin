@@ -58,6 +58,7 @@ class UserController extends Controller
         $grid = new Grid(new User);
 
         $grid->uid('UID')->sortable();
+        $grid->user_num('编号');
         $grid->nickname('昵称');
         $grid->phone('手机号');
         $grid->email('邮箱');
@@ -76,6 +77,7 @@ class UserController extends Controller
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->like('uid', 'UID');
+            $filter->like('user_num', '编号');
             $filter->like('phone', '手机号');
             $filter->like('email', '邮箱');
             $filter->like('nickname', '昵称');
@@ -93,6 +95,7 @@ class UserController extends Controller
         $show = new Show(User::findOrFail($id));
 
         $show->uid('UID');
+        $show->user_num('编号');
         $show->nickname('昵称');
         $show->head_portrait('头像')->image();
         $show->phone('手机号');
@@ -168,6 +171,7 @@ class UserController extends Controller
         $form = new Form(new User);
 
         $form->text('nickname', '昵称')->required();
+        $form->text('user_num', '编号')->required();
         $form->text('phone', '手机号')->required();
         $form->text('password', '密码')->required();
         $form->email('email', '邮箱')->required();
@@ -199,6 +203,7 @@ class UserController extends Controller
             $phone          = $form->model()->phone;
             $user           = User::wherePhone($phone)->first();
             $user->password = Hash::make($user->password);
+            $user->user_num = createUserNum();
             if (!$user->head_portrait)
                 $user->head_portrait = SystemSetting::whereSettingName('salesman_head_portrait')->value('img');
             $user->save();

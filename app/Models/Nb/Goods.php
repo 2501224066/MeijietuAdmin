@@ -119,6 +119,26 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeekendStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeixinID($value)
  * @mixin \Eloquent
+ * @property string|null $level_name 级别名称
+ * @property int|null $max_read_num 最大阅读数
+ * @property int|null $total_like_num 合计点赞数
+ * @property int|null $max_like_num 最大点赞数
+ * @property int|null $total_comment_num 合计评论数
+ * @property int|null $max_comment_num 最大评论数
+ * @property int|null $total_retweet_num 合计转发数
+ * @property int|null $max_retweet_num 最大转发数
+ * @property int|null $follows_num 关注数量
+ * @property int|null $notes_num 笔记数量
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFollowsNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxCommentNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxLikeNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxReadNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxRetweetNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereNotesNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalCommentNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalLikeNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalRetweetNum($value)
  */
 class Goods extends Model
 {
