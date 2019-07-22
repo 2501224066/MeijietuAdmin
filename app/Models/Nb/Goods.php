@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
+
 /**
  * App\Models\Nb\Goods
  *
@@ -24,7 +25,6 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property string|null $qq_ID QQ号
  * @property string|null $weixin_ID 微信号
  * @property string|null $room_ID 房间号
- * @property int|null $fans_num 粉丝数
  * @property int $auth_type 认证类型 0=未认证 1=已认证
  * @property int $news_source_status 是否新闻源 0=否 1=是
  * @property int $entry_status 入口状态 1=没有入口 2=首页入口 3=频道入口 4=上级入口
@@ -52,16 +52,28 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @property string|null $phone_weightlevel_img 移动端权重 图片
  * @property int|null $pc_weightlevel_id
  * @property string|null $pc_weightlevel_img PC端权重 图片
+ * @property string|null $verify_cause 审核原因
  * @property int $verify_status 审核状态 0=待审核 1=未通过 2=通过
  * @property int $status 上架状态 0=未上架 1=上架
  * @property int $recommend_status 推荐状态 0=否 1=是
  * @property int $delete_status 删除状态 0=未删除 1=删除
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property string|null $level_name 级别名称
+ * @property int|null $fans_num 粉丝数
  * @property int|null $avg_read_num 平均阅读数
+ * @property int|null $max_read_num 最大阅读数
+ * @property int|null $total_like_num 合计点赞数
  * @property int|null $avg_like_num 平均点赞数
+ * @property int|null $max_like_num 最大点赞数
+ * @property int|null $total_comment_num 合计评论数
  * @property int|null $avg_comment_num 平均评论数
+ * @property int|null $max_comment_num 最大评论数
+ * @property int|null $total_retweet_num 合计转发数
  * @property int|null $avg_retweet_num 平均转发数
+ * @property int|null $max_retweet_num 最大转发数
+ * @property int|null $follows_num 关注数量
+ * @property int|null $notes_num 笔记数量
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Nb\GoodsPrice[] $goods_price
  * @property-read \App\Models\Nb\GoodsPrice $one_goods_price
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods newModelQuery()
@@ -81,18 +93,25 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFansNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFiledId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFiledName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFollowsNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereGoodsId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereGoodsNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereHtmlTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIncludedSataus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIndustryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIndustryName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLevelName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLink($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLinkType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxCommentNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxLikeNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxReadNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxRetweetNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxTitleLong($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereModularId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereModularName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereNewsSourceStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereNotesNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePcWeightlevelId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePcWeightlevelImg($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePhoneWeightlevelId($value)
@@ -113,32 +132,16 @@ use Illuminate\Database\Eloquent\Relations\HasOne;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereThemeName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTitleAbout($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalCommentNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalLikeNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalRetweetNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereUid($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereVerifyCause($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereVerifyStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeekendStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeixinID($value)
  * @mixin \Eloquent
- * @property string|null $level_name 级别名称
- * @property int|null $max_read_num 最大阅读数
- * @property int|null $total_like_num 合计点赞数
- * @property int|null $max_like_num 最大点赞数
- * @property int|null $total_comment_num 合计评论数
- * @property int|null $max_comment_num 最大评论数
- * @property int|null $total_retweet_num 合计转发数
- * @property int|null $max_retweet_num 最大转发数
- * @property int|null $follows_num 关注数量
- * @property int|null $notes_num 笔记数量
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFollowsNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLevelName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxCommentNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxLikeNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxReadNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxRetweetNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereNotesNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalCommentNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalLikeNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTotalRetweetNum($value)
  */
 class Goods extends Model
 {

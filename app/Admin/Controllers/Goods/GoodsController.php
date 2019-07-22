@@ -151,6 +151,7 @@ class GoodsController extends Controller
             return $reserve_status === null ? null : Goods::RESERVE_STATUS[$reserve_status];
         })->label();
         $show->divider();
+        $show->verify_cause('审核原因');
         $show->verify_status('审核状态')->as(function ($verify_status) {
             return $verify_status === null ? null : Goods::VERIFY_STATUS[$verify_status];
         })->label();
@@ -227,6 +228,7 @@ class GoodsController extends Controller
         $form->select('included_sataus', '收录状态')->options(Goods::INCLUDED_STATUS);
         $form->select('weekend_status', '周末可发')->options(Goods::WEEKEND_STATUS);
         $form->select('reserve_status', '是否预约')->options(Goods::RESERVE_STATUS);
+        $form->text('verify_cause', '审核原因');
         $form->select('verify_status', '审核状态')->options(Goods::VERIFY_STATUS);
         $form->select('status', '上架状态')->options(Goods::STATUS);
         $form->select('recommend_status', '首页推荐')->options(Goods::RECOMMEND_STATUS);
