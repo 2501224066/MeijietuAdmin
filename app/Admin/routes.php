@@ -72,5 +72,7 @@ Route::group([
 
     // 自身业务
     //  软文套餐
-    $router->resource('/softarticle_setmeal', SelfProduct\SoftarticleSetmealController::class);
+    $router->resource('/softarticle_meal', SelfProduct\SoftarticleMealController::class);
+    //  SEO
+    $router->resource('/seo', SelfProduct\SEOController::class);
 });

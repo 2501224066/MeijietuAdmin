@@ -11,7 +11,7 @@ return [
     | login page.
     |
     */
-    'name' => 'PIKAPIKA',
+    'name'                      => 'PIKAPIKA',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '<b>PIKA</b> QIU',
+    'logo'                      => '<b>PIKA</b> QIU',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<b>PI</b>',
+    'logo-mini'                 => '<b>PI</b>',
 
     /*
     |--------------------------------------------------------------------------
@@ -44,7 +44,7 @@ return [
     | This value is the path of laravel-admin bootstrap file.
     |
     */
-    'bootstrap' => app_path('Admin/bootstrap.php'),
+    'bootstrap'                 => app_path('Admin/bootstrap.php'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     | access through the root path, just set the prefix to empty string.
     |
     */
-    'route' => [
+    'route'                     => [
 
         'prefix' => env('ADMIN_ROUTE_PREFIX', 'admin'),
 
@@ -75,7 +75,7 @@ return [
     | be set before running `artisan admin::install` to take effect.
     |
     */
-    'directory' => app_path('Admin'),
+    'directory'                 => app_path('Admin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -85,7 +85,7 @@ return [
     | Html title for all pages.
     |
     */
-    'title' => 'Admin',
+    'title'                     => 'Admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -95,7 +95,7 @@ return [
     | If your page is going to be accessed via https, set it to `true`.
     |
     */
-    'https' => env('ADMIN_HTTPS', false),
+    'https'                     => env('ADMIN_HTTPS', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,7 @@ return [
     | You can specify a controller for `login` `logout` and other auth routes.
     |
     */
-    'auth' => [
+    'auth'                      => [
 
         'controller' => App\Admin\Controllers\AuthController::class,
 
@@ -119,7 +119,7 @@ return [
             ],
         ],
 
-        'providers' => [
+        'providers'   => [
             'admin' => [
                 'driver' => 'eloquent',
                 'model'  => Encore\Admin\Auth\Database\Administrator::class,
@@ -127,13 +127,13 @@ return [
         ],
 
         // Add "remember me" to login form
-        'remember' => true,
+        'remember'    => true,
 
         // Redirect to the specified URI when user is not authorized.
         'redirect_to' => 'auth/login',
 
         // The URIs that should be excluded from authorization.
-        'excepts' => [
+        'excepts'     => [
             'auth/login',
             'auth/logout',
         ],
@@ -148,10 +148,10 @@ return [
     | disk and upload path.
     |
     */
-    'upload' => [
+    'upload'                    => [
 
         // Disk in `config/filesystem.php`.
-        'disk' => 'oss',
+        'disk'      => 'oss',
 
         // Image and file upload path under the disk above.
         'directory' => [
@@ -168,26 +168,26 @@ return [
     | Here are database settings for laravel-admin builtin model & tables.
     |
     */
-    'database' => [
+    'database'                  => [
 
         // Database connection for following tables.
-        'connection' => '',
+        'connection'             => '',
 
         // User tables and model.
-        'users_table' => 'admin_users',
-        'users_model' => Encore\Admin\Auth\Database\Administrator::class,
+        'users_table'            => 'admin_users',
+        'users_model'            => Encore\Admin\Auth\Database\Administrator::class,
 
         // Role table and model.
-        'roles_table' => 'admin_roles',
-        'roles_model' => Encore\Admin\Auth\Database\Role::class,
+        'roles_table'            => 'admin_roles',
+        'roles_model'            => Encore\Admin\Auth\Database\Role::class,
 
         // Permission table and model.
-        'permissions_table' => 'admin_permissions',
-        'permissions_model' => Encore\Admin\Auth\Database\Permission::class,
+        'permissions_table'      => 'admin_permissions',
+        'permissions_model'      => Encore\Admin\Auth\Database\Permission::class,
 
         // Menu table and model.
-        'menu_table' => 'admin_menu',
-        'menu_model' => Encore\Admin\Auth\Database\Menu::class,
+        'menu_table'             => 'admin_menu',
+        'menu_model'             => Encore\Admin\Auth\Database\Menu::class,
 
         // Pivot table for table above.
         'operation_log_table'    => 'admin_operation_log',
@@ -205,9 +205,9 @@ return [
     | By setting this option to open or close operation log in laravel-admin.
     |
     */
-    'operation_log' => [
+    'operation_log'             => [
 
-        'enable' => true,
+        'enable'          => true,
 
         /*
          * Only logging allowed methods in the list
@@ -220,7 +220,7 @@ return [
          * All method to path like: admin/auth/logs
          * or specific method to path like: get:admin/auth/logs.
          */
-        'except' => [
+        'except'          => [
             'admin/auth/logs*',
         ],
     ],
@@ -233,7 +233,7 @@ return [
     | Set a default avatar for newly created users.
     |
     */
-    'default_avatar' => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
+    'default_avatar'            => '/vendor/laravel-admin/AdminLTE/dist/img/user2-160x160.jpg',
 
     /*
     |--------------------------------------------------------------------------
@@ -243,7 +243,7 @@ return [
     | Supported: "tencent", "google", "yandex".
     |
     */
-    'map_provider' => 'google',
+    'map_provider'              => 'google',
 
     /*
     |--------------------------------------------------------------------------
@@ -259,7 +259,7 @@ return [
     |    "skin-red", "skin-red-light", "skin-black", "skin-black-light".
     |
     */
-    'skin' => 'skin-blue-light',
+    'skin'                      => 'skin-blue-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -273,7 +273,7 @@ return [
     | "sidebar-mini".
     |
     */
-    'layout' => ['sidebar-mini', 'sidebar-collapse'],
+    'layout'                    => ['sidebar-mini', 'sidebar-collapse'],
 
     /*
     |--------------------------------------------------------------------------
@@ -283,7 +283,7 @@ return [
     | This value is used to set the background image of login page.
     |
     */
-    'login_background_image' => '',
+    'login_background_image'    => '',
 
     /*
     |--------------------------------------------------------------------------
@@ -294,7 +294,7 @@ return [
     | each page
     |
     */
-    'show_version' => true,
+    'show_version'              => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -304,7 +304,7 @@ return [
     | Whether to display the environment at the footer of each page
     |
     */
-    'show_environment' => true,
+    'show_environment'          => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -313,7 +313,7 @@ return [
     |
     | whether enable menu bind to a permission
     */
-    'menu_bind_permission' => true,
+    'menu_bind_permission'      => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -329,7 +329,7 @@ return [
     | Enable/Disable assets minify
     |--------------------------------------------------------------------------
     */
-    'minify_assets' => true,
+    'minify_assets'             => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -339,7 +339,7 @@ return [
     | When you use command `php artisan admin:extend` to generate extensions,
     | the extension files will be generated in this directory.
     */
-    'extension_dir' => app_path('Admin/Extensions'),
+    'extension_dir'             => app_path('Admin/Extensions'),
 
     /*
     |--------------------------------------------------------------------------
@@ -350,7 +350,13 @@ return [
     | https://github.com/laravel-admin-extensions.
     |
     */
-    'extensions' => [
-
-    ],
+    'extensions'                => [
+        'simplemde' => [
+            'enable' => true,
+            'alias'  => 'markdown',
+            'config' => [
+                'autofocus' => true
+            ]
+        ]
+    ]
 ];

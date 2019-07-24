@@ -20,3 +20,4 @@
 
 Encore\Admin\Form::forget(['map', 'editor']);
 Admin::css('/css/styles.css');
+Admin::css('/css/self.css');

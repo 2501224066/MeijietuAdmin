@@ -67,6 +67,8 @@ class User extends Model
 
     protected $guarded = [];
 
+    const GF = 1;
+
     const IDENTITY = [
         "1" => "广告主",
         "2" => "媒体主",

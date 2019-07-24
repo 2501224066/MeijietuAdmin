@@ -75,7 +75,7 @@ class InformationController extends Controller
     $show->author('作者');
     $show->read_num('阅读数');
     $show->time('创建时间');
-    $show->motif_img('装饰图片')->image();
+    $show->motif_img('封面图片')->image();
     $show->content('资讯内容')->unescape()->as(function ($avatar) {
 
         return "<textarea style='width: 100%;border: none;resize: none;' readonly rows='20'>{$avatar}</textarea>";
@@ -94,8 +94,8 @@ class InformationController extends Controller
         $form->text('author','作者')->required();
         $form->date('time','创建时间')->required();
         $form->number('read_num','阅读数')->required()->value(7);
-        $form->textarea('content','文章内容')->rows(20)->required();
-        $form->image('motif_img','装饰图片')->name(function ($file) {
+        $form->markdown('content','文章内容')->required();
+        $form->image('motif_img','封面图片')->name(function ($file) {
             return "information/" . str_random(30) . "." . $file->guessExtension();
         })->required();
         $form->footer(function ($footer) {

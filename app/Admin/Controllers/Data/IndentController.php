@@ -102,6 +102,7 @@ class IndentController extends Controller
         $show->pay_amount('支付金额');
         $show->pay_time('支付时间');
         $show->divider();
+        $show->bargaining_reduce('议价节省');
         $show->bargaining_status('议价状态')->as(function ($bargaining_status) {
             return IndentInfo::BARGAINING_STATUS[$bargaining_status];
         })->label();
@@ -157,6 +158,7 @@ class IndentController extends Controller
         $form->number('seller_income', '买家收入');
         $form->number('pay_amount', '支付金额')->readOnly();
         $form->datetime('pay_time', '支付时间')->readOnly();
+        $form->number('bargaining_reduce', '议价节省')->readOnly();
         $form->select('bargaining_status', '议价状态')->options(IndentInfo::BARGAINING_STATUS);
         $form->select('status', '订单状态')->options(IndentInfo::STATUS);
         $form->select('delete_status', '删除状态')->options(IndentInfo::DELETE_STATUS);

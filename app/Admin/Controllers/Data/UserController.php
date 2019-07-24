@@ -170,9 +170,10 @@ class UserController extends Controller
     {
         $form = new Form(new User);
 
+        $form->text('uid', 'UID');
         $form->text('nickname', '昵称')->required();
-        $form->text('user_num', '编号')->required();
-        $form->text('phone', '手机号')->required();
+        $form->text('user_num', '编号')->readOnly()->value(createUserNum());
+        $form->text('phone', '电话')->required();
         $form->text('password', '密码')->required();
         $form->email('email', '邮箱')->required();
         $form->image('head_portrait', '头像')->name(function ($file) {
@@ -184,10 +185,8 @@ class UserController extends Controller
         $form->text('weixin_ID', '微信号');
         $form->select('identity', '身份')->options(User::IDENTITY)->value(3)->readonly();
         $form->select('realname_status', '实名认证')->options(User::REALNAME_STATUS)->value(0)->readonly();
-        $form->text('ip', 'IP')->value(Input::getClientIp());
+        $form->hidden('ip', 'IP')->value(Input::getClientIp());
         $form->select('status', '状态')->options(User::STATUS)->value(1);
-        $form->display('salesman_id', '客服ID')->readOnly();
-        $form->display('salesman_name', '客服名称')->readOnly();
         $form->display('created_at', '创建时间');
         $form->display('updated_at', '修改时间');
         $form->tools(function (Form\Tools $tools) {
@@ -200,8 +199,8 @@ class UserController extends Controller
         });
         $form->saved(function (Form $form) {
             // 修改头像，加密密码
-            $phone          = $form->model()->phone;
-            $user           = User::wherePhone($phone)->first();
+            $userNum         = $form->model()->user_num;
+            $user           = User::whereUserNum($userNum)->first();
             $user->password = Hash::make($user->password);
             $user->user_num = createUserNum();
             if (!$user->head_portrait)
