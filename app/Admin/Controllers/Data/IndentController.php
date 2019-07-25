@@ -117,6 +117,7 @@ class IndentController extends Controller
         $show->cancel_cause('取消原因');
         $show->demand_file('需求文档')->file();
         $show->achievements_file('成果文档')->file();
+        $show->bind_indent_num('绑定订单');
 
         $show->indent_item('订单商品', function ($indnet_item) {
             $indnet_item->goods_id('商品ID');
@@ -166,6 +167,7 @@ class IndentController extends Controller
         $form->text('cancel_cause', '取消原因');
         $form->file('demand_file', '需求文档');
         $form->file('achievements_file', '成果文档');
+        $form->text('bind_indent_num', '绑定订单')->readOnly();
         $form->tools(function (Form\Tools $tools) {
             $tools->disableDelete();
         });
