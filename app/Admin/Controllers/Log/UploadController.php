@@ -62,7 +62,7 @@ class UploadController extends Controller
     {
         $form = new Form(new Upload);
 
-        $form->text('uid', 'UID')->readOnly()->value(User::GF);
+        $form->text('uid', 'UID')->readOnly()->value(User::GF_SELLER);
         $form->text('upload_type', '上传类型')->readOnly()->value('后台图片');
         $form->display('created_at', '上传时间');
         $form->image('file', '文件')->name(function ($file) {

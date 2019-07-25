@@ -67,7 +67,11 @@ class User extends Model
 
     protected $guarded = [];
 
-    const GF = 1;
+    // 官方卖家
+    const GF_SELLER = 1;
+
+    // 官方买家
+    const GF_BUYER = 2;
 
     const IDENTITY = [
         "1" => "广告主",
