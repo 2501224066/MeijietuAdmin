@@ -172,7 +172,7 @@ class UserController extends Controller
 
         $form->text('uid', 'UID');
         $form->text('nickname', '昵称')->required();
-        $form->text('user_num', '编号')->readOnly()->value(createUserNum());
+        $form->text('user_num', '编号')->readOnly()->value(createNum('USER'));
         $form->text('phone', '电话')->required();
         $form->text('password', '密码')->required();
         $form->email('email', '邮箱')->required();
@@ -199,10 +199,10 @@ class UserController extends Controller
         });
         $form->saved(function (Form $form) {
             // 修改头像，加密密码
-            $userNum         = $form->model()->user_num;
+            $userNum        = $form->model()->user_num;
             $user           = User::whereUserNum($userNum)->first();
             $user->password = Hash::make($user->password);
-            $user->user_num = createUserNum();
+            $user->user_num = createNum('USER');
             if (!$user->head_portrait)
                 $user->head_portrait = SystemSetting::whereSettingName('salesman_head_portrait')->value('img');
             $user->save();

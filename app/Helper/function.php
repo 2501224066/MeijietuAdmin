@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Input;
-use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 // 取当前路由末尾值(id)
 function getUrlLast()
@@ -13,41 +12,33 @@ function getUrlLast()
 }
 
 /**
- * 生成用户编号
- * @return string
+ * 生成编号
  */
-function createUserNum() : string
+function createNum($numType)
 {
-    $asciiArr = [48,49,50,51,52,53,54,55,57,57,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90];
-    $randStr = mt_rand(10,35).date('Y'). mt_rand(10,35).date('m').mt_rand(10,35).date('dH').mt_rand(10,35).mt_rand(10,35);
-    $arr = str_split($randStr, 2);
-    $num = "";
-    foreach($arr as $v){
-        $num .= chr($asciiArr[$v*1]);
-    }
+    // 订单数key
+    $key = $numType . date('Ymd');
+    // 当天单数
+    $todayCount = todayCount($key);
+    // 单数自增
+    Cache::increment($key);
 
-    $count = \App\Models\Data\User::whereUserNum($num)->count();
-    if($count)
-        $num = createUserNum();
+    return substr(date('Ymd'), 2) . $todayCount;
 
-    return $num;
 }
 
 /**
- * 生成商品编号
- * @param string $abbreviation 业务简写
- * @return string
+ * 当天单数
+ * @param string $key 键
+ * @return int
  */
-function createGoodsNnm($abbreviation) : string
+function todayCount($key): int
 {
-    $num = date('d') . strtoupper(uniqid()) . date('Y') . mt_rand(1000000, 9999999) . $abbreviation . date('m');
-    $count = \App\Models\Nb\Goods::whereGoodsNum($num)->count();
-    if($count)
-        $num = createGoodsNnm($abbreviation);
+    if (!Cache::has($key))
+        Cache::put($key, 1, 60 * 24);
 
-    return $num;
+    return sprintf("%04d", Cache::get($key));
 }
-
 
 // label颜色设置
 function labelColor($num, $arr)

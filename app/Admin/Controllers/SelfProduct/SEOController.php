@@ -125,7 +125,7 @@ class SEOController extends Controller
         $form->select('status', '上架状态')->options(Goods::STATUS)->value(1)->readonly();
         $form->hidden('created_at', '创建时间');
         $form->hidden('updated_at', '修改时间');
-        $form->text('goods_num', '商品编号')->value(createGoodsNnm($Data->modular[0]->abbreviation))->readonly();
+        $form->text('goods_num', '商品编号')->value(createNum('GOODS'))->readonly();
         // 价格
         $form->hidden('one_goods_price.priceclassify_id', '价格种类ID')->value($Data->priceclassify[0]->priceclassify_id)->readonly();
         $form->text('one_goods_price.priceclassify_name', '价格种类')->value($Data->priceclassify[0]->priceclassify_name)->readonly();
