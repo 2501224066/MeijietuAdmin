@@ -167,6 +167,7 @@ class GoodsController extends Controller
         $show->created_at('创建时间');
         $show->updated_at('修改时间');
         $show->goods_price('商品价格', function ($goods_price) {
+            $goods_price->goods_price_id('商品价格ID');
             $goods_price->priceclassify_name('价格种类');
             $goods_price->floor_price('底价');
             $goods_price->price('价格');

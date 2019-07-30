@@ -44,9 +44,7 @@ class RunwaterController extends Controller
         $grid->money('金额')->label();
         $grid->from_uid('来源');
         $grid->to_uid('去向');
-        $grid->direction('方向')->display(function ($direction) {
-            return labelColor($direction, Runwater::DIRECTION);
-        });
+        $grid->pay_type('支付方式')->label();
         $grid->status('状态')->display(function ($status) {
             return labelColor($status, Runwater::STATUS);
         });
@@ -87,6 +85,7 @@ class RunwaterController extends Controller
         $show->from_uid('来源');
         $show->to_uid('去向');
         $show->money('金额');
+        $show->pay_type('支付方式')->label();
         $show->type('类型')->as(function ($type) {
             return Runwater::TYPE[$type];
         })->label();
@@ -99,13 +98,8 @@ class RunwaterController extends Controller
         $show->indent_id('订单ID');
         $show->indent_num('订单编号');
         $show->callback_time('回调时间');
-        $show->callback_oid_paybill('连连支付单号');
+        $show->callback_trade_no('交易凭证');
         $show->callback_money_order('交易金额');
-        $show->callback_settle_order('清算日期');
-        $show->callback_pay_type('支付方式')->as(function ($callback_pay_type){
-            return $callback_pay_type ? Runwater::CALLBACK_PAY_TYPE[$callback_pay_type] : null;
-        });
-        $show->callback_bank_code('银行编号');
         $show->created_at('创建时间');
         $show->updated_at('修改时间');
         $show->panel()->tools(function ($tools) {

@@ -31,7 +31,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @property string|null $demand_file 需求文档
  * @property string|null $achievements_file 成果文档
  * @property int $delete_status 删除状态 0=未删除 1=删除
- * @property string|null $bind_indent_num 绑定订单编号 （例如为软文套餐生成的大量订单）
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Data\IndentItem[] $indent_item
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo newQuery()
@@ -39,7 +38,6 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereAchievementsFile($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereBargainingReduce($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereBargainingStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereBindIndentNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereBuyerId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereCancelCause($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\IndentInfo whereCompensateFee($value)

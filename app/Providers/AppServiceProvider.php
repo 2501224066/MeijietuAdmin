@@ -33,7 +33,7 @@ class AppServiceProvider extends ServiceProvider
 
                 $query = vsprintf($query, $sql->bindings);
 
-                Log::info('【SQL】' . ' : ' . $query . PHP_EOL);
+                Log::info('【SQL】' . ' : ' . $query);
             }
         );
     }
