@@ -98,6 +98,7 @@ class RunwaterController extends Controller
         $show->indent_id('订单ID');
         $show->indent_num('订单编号');
         $show->callback_time('回调时间');
+        $show->callback_success_time('充值时间');
         $show->callback_trade_no('交易凭证');
         $show->callback_money_order('交易金额');
         $show->created_at('创建时间');
