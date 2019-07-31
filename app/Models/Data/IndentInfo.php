@@ -58,7 +58,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  */
 class IndentInfo extends Model
 {
-    protected $table = 'indent_info';
+    protected $table = 'data_indent_info';
 
     protected $primaryKey = 'indent_id';
 

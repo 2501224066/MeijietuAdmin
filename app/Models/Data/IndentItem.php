@@ -40,7 +40,7 @@ use Illuminate\Database\Eloquent\Model;
  */
 class IndentItem extends Model
 {
-    protected $table = 'indent_item';
+    protected $table = 'data_indent_item';
 
     protected $primaryKey = 'item_id';
 

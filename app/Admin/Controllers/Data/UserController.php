@@ -5,8 +5,8 @@ namespace App\Admin\Controllers\Data;
 
 
 use App\Http\Controllers\Controller;
-use App\Models\Data\SystemSetting;
-use App\Models\Data\User;
+use App\Models\System\Setting;
+use App\Models\User;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
@@ -204,7 +204,7 @@ class UserController extends Controller
             $user->password = Hash::make($user->password);
             $user->user_num = createNum('USER');
             if (!$user->head_portrait)
-                $user->head_portrait = SystemSetting::whereSettingName('salesman_head_portrait')->value('img');
+                $user->head_portrait = Setting::whereSettingName('salesman_head_portrait')->value('img');
             $user->save();
         });
 

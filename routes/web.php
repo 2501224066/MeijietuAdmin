@@ -11,6 +11,6 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
+Route::get('/', function () {
+    return "*_* 武藏，小次郎";
+});

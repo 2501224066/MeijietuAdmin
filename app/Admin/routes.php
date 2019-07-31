@@ -14,25 +14,25 @@ Route::group([
 
     // 平台数据
     //  网站用户
-    $router->resource('/website_user', Data\UserController::class);
-    //  客服人员
-    $router->resource('/website_usalesman', Data\UsalesmanController::class);
-    //  订单数据
-    $router->resource('/indent', Data\IndentController::class);
-    //  钱包资金
-    $router->resource('/wallet', Data\WalletController::class);
-    //  流水记录
-    $router->resource('/runwater', Data\RunwaterController::class);
-    //  资讯文章
-    $router->resource('/information', Data\InformationController::class);
-    //  网站设置
-    $router->resource('/system_setting', Data\SystemSettingController::class);
-
-    // 商品数据
+    $router->resource('/user', Data\UserController::class);
     //  所有商品
-    $router->resource('/goods/all', Goods\GoodsController::class);
+    $router->resource('/data/goods', Data\GoodsController::class);
     //  商品价格
-    $router->resource('/goods/price', Goods\PriceController::class);
+    $router->resource('/data/goods_price', Data\GoodsPriceController::class);
+    //  订单数据
+    $router->resource('/data/indent', Data\IndentController::class);
+
+    // 资金数据
+    //  钱包资金
+    $router->resource('/pay/wallet', Pay\WalletController::class);
+    //  流水记录
+    $router->resource('/pay/runwater', Pay\RunwaterController::class);
+
+    // 系统数据
+    //  资讯文章
+    $router->resource('/system/information', System\InformationController::class);
+    //  网站设置
+    $router->resource('/system/setting', System\SettingController::class);
 
     // 日志记录
     //  登录日志
@@ -44,35 +44,35 @@ Route::group([
     //  失败队列
     $router->resource('/failed_jobs', Log\FailedJobsController::class);
 
-    // TB管理
+    // 参数管理
     //  模块
-    $router->resource('/tb/modular', Tb\ModularController::class);
+    $router->resource('/attr/modular', Attr\ModularController::class);
     //  主题
-    $router->resource('/tb/theme', Tb\ThemeController::class);
+    $router->resource('/attr/theme', Attr\ThemeController::class);
     //  领域
-    $router->resource('/tb/filed', Tb\FiledController::class);
+    $router->resource('/attr/filed', Attr\FiledController::class);
     //  平台
-    $router->resource('/tb/platform', Tb\PlatformController::class);
+    $router->resource('/attr/platform', Attr\PlatformController::class);
     //  行业
-    $router->resource('/tb/industry', Tb\IndustryController::class);
+    $router->resource('/attr/industry', Attr\IndustryController::class);
     //  价格种类
-    $router->resource('/tb/priceclassify', Tb\PriceclassifyController::class);
+    $router->resource('/attr/priceclassify', Attr\PriceclassifyController::class);
     //  地区
-    $router->resource('/tb/region', Tb\RegionController::class);
+    $router->resource('/attr/region', Attr\RegionController::class);
     //  粉丝量级
-    $router->resource('/tb/fansnumlevel', Tb\FansnumlevelController::class);
+    $router->resource('/attr/fansnumlevel', Attr\FansnumlevelController::class);
     //  平均阅读量级
-    $router->resource('/tb/readlevel', Tb\ReadlevelController::class);
+    $router->resource('/attr/readlevel', Attr\ReadlevelController::class);
     //  平均点赞量级
-    $router->resource('/tb/likelevel', Tb\LikelevelController::class);
+    $router->resource('/attr/likelevel', Attr\LikelevelController::class);
     //  权重
-    $router->resource('/tb/weightlevel', Tb\WeightlevelController::class);
+    $router->resource('/attr/weightlevel', Attr\WeightlevelController::class);
     //  价格量级
-    $router->resource('/tb/pricelevel', Tb\PricelevelController::class);
+    $router->resource('/attr/pricelevel', Attr\PricelevelController::class);
 
-    // 自身业务
+    // 创建商品
     //  软文套餐
-    $router->resource('/softarticle_meal', SelfProduct\SoftarticleMealController::class);
+    $router->resource('/add_goods/softarticle_meal', SelfProduct\SoftarticleMealController::class);
     //  SEO
-    $router->resource('/seo', SelfProduct\SEOController::class);
+    $router->resource('/add_goods/seo', SelfProduct\SEOController::class);
 });

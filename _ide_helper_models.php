@@ -110,27 +110,27 @@ namespace App\Models\Data{
  * @property string $bank_band_phone 绑定手机号
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankBandPhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankCard($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankCity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankDeposit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankPorv($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBusinessLicense($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereEnterpriseName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereSocialCreditCode($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereUid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankBandPhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankCard($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankDeposit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankPorv($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBusinessLicense($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereEnterpriseName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereSocialCreditCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereUpdatedAt($value)
  * @mixin \Eloquent
  * @property string $bank_branch 开户支行
  * @property string $bank_prov 开户省
  * @property int $verify_status 审核状态 0=失败 1=成功
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankBranch($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereBankProv($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnameEnterprise whereVerifyStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankBranch($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereBankProv($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\Enterprise whereVerifyStatus($value)
  */
 	class RealnameEnterprise extends \Eloquent {}
 }
@@ -153,26 +153,26 @@ namespace App\Models\Data{
  * @property string $bank_band_phone 绑定手机号
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankBandPhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankBranch($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankCard($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankCity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankDeposit($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereBankProv($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereIdentityCardBack($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereIdentityCardFace($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereIdentityCardHold($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereIdentityCardID($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereTruename($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereUid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankBandPhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankBranch($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankCard($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankDeposit($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereBankProv($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereIdentityCardBack($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereIdentityCardFace($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereIdentityCardHold($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereIdentityCardID($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereTruename($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereUpdatedAt($value)
  * @mixin \Eloquent
  * @property int $verify_status 审核状态 0=失败 1=成功
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\RealnamePeople whereVerifyStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Realname\People whereVerifyStatus($value)
  */
 	class RealnamePeople extends \Eloquent {}
 }
@@ -231,18 +231,18 @@ namespace App\Models\Data{
  *
  * @property string $setting_name 设定名称
  * @property string $value 设定值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting whereSettingName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting whereValue($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting whereSettingName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting whereValue($value)
  * @mixin \Eloquent
  * @property int $id
  * @property string $about 解释
  * @property string|null $img 图片值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting whereAbout($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\SystemSetting whereImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting whereAbout($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Setting whereImg($value)
  */
 	class SystemSetting extends \Eloquent {}
 }
@@ -262,7 +262,7 @@ namespace App\Models\Data{
  * @property int $status 状态 0=禁用 1=启用
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Data\User[] $user
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $user
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Usalesman newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Usalesman newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Usalesman query()
@@ -302,46 +302,46 @@ namespace App\Models\Data{
  * @property int|null $status 状态 0=禁用 1=启用
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Data\RealnameEnterprise $realnameEnterprise
- * @property-read \App\Models\Data\RealnamePeople $realnamePeople
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereBirth($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereIdentity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereIp($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereNickname($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User wherePassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereQqID($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereRealnameStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereSex($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereUid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereWeixinID($value)
+ * @property-read \App\Models\Realname\Enterprise $realnameEnterprise
+ * @property-read \App\Models\Realname\People $realnamePeople
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereBirth($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIdentity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereIp($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereNickname($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereQqID($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereRealnameStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereSex($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWeixinID($value)
  * @mixin \Eloquent
  * @property string|null $head_portrait 头像
  * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Data\Usalesman[] $usalesman
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User whereHeadPortrait($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereHeadPortrait($value)
  */
 	class User extends \Eloquent {}
 }
 
 namespace App\Models\Data{
 /**
- * App\Models\Data\User_usalesman
+ * App\Models\User_usalesman
  *
  * @property int $uid 用户id
  * @property int $salesman_id
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User_usalesman newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User_usalesman newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User_usalesman query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User_usalesman whereSalesmanId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\User_usalesman whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User_usalesman newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User_usalesman newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User_usalesman query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User_usalesman whereSalesmanId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User_usalesman whereUid($value)
  * @mixin \Eloquent
  */
 	class User_usalesman extends \Eloquent {}
@@ -474,9 +474,9 @@ namespace App\Models\Log{
 	class Upload extends \Eloquent {}
 }
 
-namespace App\Models\Nb{
+namespace App\Models\Data{
 /**
- * App\Models\Nb\Goods
+ * App\Models\Data\Goods
  *
  * @property int $goods_id
  * @property int $uid 用户id 默认官方账户
@@ -529,70 +529,70 @@ namespace App\Models\Nb{
  * @property int|null $avg_like_num 平均点赞数
  * @property int|null $avg_comment_num 平均评论数
  * @property int|null $avg_retweet_num 平均转发数
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Nb\GoodsPrice[] $goods_price
- * @property-read \App\Models\Nb\GoodsPrice $one_goods_price
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAuthType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAvatarUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAvgCommentNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAvgLikeNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAvgReadNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereAvgRetweetNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereCaseLink($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereContent($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereDeleteStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereEntryStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFansNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFiledId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereFiledName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereGoodsId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereGoodsNum($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereHtmlTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIncludedSataus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIndustryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereIndustryName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLink($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereLinkType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereMaxTitleLong($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereModularId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereModularName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereNewsSourceStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePcWeightlevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePcWeightlevelImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePhoneWeightlevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePhoneWeightlevelImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePlatformId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePlatformLogo($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods wherePlatformName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereQqID($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereQrcodeUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereRecommendStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereRegionId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereRegionName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereRemarks($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereReserveStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereRoomID($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereThemeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereThemeName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereTitleAbout($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereUid($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereVerifyStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeekendStatus($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\Goods whereWeixinID($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Data\GoodsPrice[] $goods_price
+ * @property-read \App\Models\Data\GoodsPrice $one_goods_price
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAuthType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAvatarUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAvgCommentNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAvgLikeNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAvgReadNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereAvgRetweetNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereCaseLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereDeleteStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereEntryStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereFansNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereFiledId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereFiledName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereGoodsId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereGoodsNum($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereHtmlTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereIncludedSataus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereIndustryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereIndustryName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereLinkType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereMaxTitleLong($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereModularId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereModularName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereNewsSourceStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePcWeightlevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePcWeightlevelImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePhoneWeightlevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePhoneWeightlevelImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePlatformId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePlatformLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods wherePlatformName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereQqID($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereQrcodeUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereRecommendStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereRegionId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereRegionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereRemarks($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereReserveStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereRoomID($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereThemeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereThemeName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereTitleAbout($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereUid($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereVerifyStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereWeekendStatus($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\Goods whereWeixinID($value)
  * @mixin \Eloquent
  */
 	class Goods extends \Eloquent {}
 }
 
-namespace App\Models\Nb{
+namespace App\Models\Data{
 /**
- * App\Models\Nb\GoodsPrice
+ * App\Models\Data\GoodsPrice
  *
  * @property int $goods_price_id
  * @property int $goods_id
@@ -600,22 +600,22 @@ namespace App\Models\Nb{
  * @property string $priceclassify_name 价格种类
  * @property float $floor_price 低价(软文模式使用)
  * @property float $price 真实价格
- * @property-read \App\Models\Nb\Goods $goods
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice whereFloorPrice($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice whereGoodsId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice whereGoodsPriceId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice wherePrice($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice wherePriceclassifyId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Nb\GoodsPrice wherePriceclassifyName($value)
+ * @property-read \App\Models\Data\Goods $goods
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice whereFloorPrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice whereGoodsId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice whereGoodsPriceId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice wherePriceclassifyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Data\GoodsPrice wherePriceclassifyName($value)
  * @mixin \Eloquent
  */
 	class GoodsPrice extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Fansnumlevel
  *
@@ -623,51 +623,51 @@ namespace App\Models\Tb{
  * @property string $fansnumlevel_name 粉丝量级名称
  * @property int $fansnumlevel_min 粉丝量级最小值
  * @property int $fansnumlevel_max 粉丝量级最大值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel whereFansnumlevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel whereFansnumlevelMax($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel whereFansnumlevelMin($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Fansnumlevel whereFansnumlevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel whereFansnumlevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel whereFansnumlevelMax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel whereFansnumlevelMin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Fansnumlevel whereFansnumlevelName($value)
  * @mixin \Eloquent
  */
 	class Fansnumlevel extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Filed
  *
  * @property int $filed_id 领域id
  * @property string $filed_name 领域名称
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Filed newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Filed newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Filed query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Filed whereFiledId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Filed whereFiledName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Filed newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Filed newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Filed query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Filed whereFiledId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Filed whereFiledName($value)
  * @mixin \Eloquent
  */
 	class Filed extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Industry
  *
  * @property int $industry_id 行业id
  * @property string $industry_name 行业名称
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Industry newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Industry newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Industry query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Industry whereIndustryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Industry whereIndustryName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Industry newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Industry newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Industry query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Industry whereIndustryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Industry whereIndustryName($value)
  * @mixin \Eloquent
  */
 	class Industry extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Likelevel
  *
@@ -675,19 +675,19 @@ namespace App\Models\Tb{
  * @property string $likelevel_name 平均点赞量级名称
  * @property int $likelevel_min 平均点赞量级最小值
  * @property int $likelevel_max 平均点赞量级最大值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel whereLikelevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel whereLikelevelMax($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel whereLikelevelMin($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Likelevel whereLikelevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel whereLikelevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel whereLikelevelMax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel whereLikelevelMin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Likelevel whereLikelevelName($value)
  * @mixin \Eloquent
  */
 	class Likelevel extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Modular
  *
@@ -696,57 +696,57 @@ namespace App\Models\Tb{
  * @property string $tag 模块标记
  * @property string $abbreviation 缩写
  * @property int $settlement_type 结算方式 1=标准模式 2=软文模式  3=自身模式
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Theme[] $theme
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular whereAbbreviation($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular whereModularId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular whereModularName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular whereSettlementType($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Modular whereTag($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Theme[] $theme
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular whereAbbreviation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular whereModularId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular whereModularName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular whereSettlementType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Modular whereTag($value)
  * @mixin \Eloquent
  */
 	class Modular extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Platform
  *
  * @property int $platform_id
  * @property string $platform_name
  * @property string|null $logo_path
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform whereLogoPath($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform wherePlatformId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Platform wherePlatformName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform whereLogoPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform wherePlatformId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Platform wherePlatformName($value)
  * @mixin \Eloquent
  */
 	class Platform extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Priceclassify
  *
  * @property int $priceclassify_id 价格种类id
  * @property string $priceclassify_name 价格种类名称
  * @property string $tag
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify wherePriceclassifyId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify wherePriceclassifyName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Priceclassify whereTag($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify wherePriceclassifyId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify wherePriceclassifyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Priceclassify whereTag($value)
  * @mixin \Eloquent
  */
 	class Priceclassify extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Pricelevel
  *
@@ -754,19 +754,19 @@ namespace App\Models\Tb{
  * @property string $pricelevel_name 价格量级名称
  * @property int $pricelevel_min 价格量级最小值
  * @property int $pricelevel_max 价格量级最大值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel wherePricelevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel wherePricelevelMax($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel wherePricelevelMin($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Pricelevel wherePricelevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel wherePricelevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel wherePricelevelMax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel wherePricelevelMin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Pricelevel wherePricelevelName($value)
  * @mixin \Eloquent
  */
 	class Pricelevel extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Readlevel
  *
@@ -774,76 +774,76 @@ namespace App\Models\Tb{
  * @property string $readlevel_name 平均阅读量级名称
  * @property int $readlevel_min 平均阅读量级最小值
  * @property int $readlevel_max 平均阅读量级最大值
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel whereReadlevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel whereReadlevelMax($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel whereReadlevelMin($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Readlevel whereReadlevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel whereReadlevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel whereReadlevelMax($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel whereReadlevelMin($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Readlevel whereReadlevelName($value)
  * @mixin \Eloquent
  */
 	class Readlevel extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Region
  *
  * @property int $region_id 面向地区id
  * @property string $region_name 面向地区
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Region newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Region newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Region query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Region whereRegionId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Region whereRegionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Region newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Region newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Region query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Region whereRegionId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Region whereRegionName($value)
  * @mixin \Eloquent
  */
 	class Region extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Theme
  *
  * @property int $theme_id
  * @property string $theme_name
  * @property string $theme_status
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Fansnumlevel[] $fansnumlevel
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Filed[] $filed
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Industry[] $industry
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Likelevel[] $likelevel
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Modular[] $modular
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Platform[] $platform
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Priceclassify[] $priceclassify
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Pricelevel[] $pricelevel
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Readlevel[] $readlevel
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Region[] $region
- * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Tb\Weightlevel[] $weightlevel
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme whereThemeId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme whereThemeName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Theme whereThemeStatus($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Fansnumlevel[] $fansnumlevel
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Filed[] $filed
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Industry[] $industry
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Likelevel[] $likelevel
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Modular[] $modular
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Platform[] $platform
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Priceclassify[] $priceclassify
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Pricelevel[] $pricelevel
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Readlevel[] $readlevel
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Region[] $region
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Attr\Weightlevel[] $weightlevel
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme whereThemeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme whereThemeName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Theme whereThemeStatus($value)
  * @mixin \Eloquent
  */
 	class Theme extends \Eloquent {}
 }
 
-namespace App\Models\Tb{
+namespace App\Models\Attr{
 /**
  * App\Models\Tb\Weightlevel
  *
  * @property int $weightlevel_id 权重等级id
  * @property string $weightlevel_name 权重等级名称
  * @property string $img_path 权重等级图片
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel whereImgPath($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel whereWeightlevelId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Tb\Weightlevel whereWeightlevelName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel whereImgPath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel whereWeightlevelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Attr\Weightlevel whereWeightlevelName($value)
  * @mixin \Eloquent
  */
 	class Weightlevel extends \Eloquent {}

@@ -6,7 +6,7 @@ namespace App\Admin\Controllers\Log;
 
 use App\Http\Controllers\Controller;
 use App\Models\Data\information;
-use App\Models\Data\User;
+use App\Models\User;
 use App\Models\Log\Upload;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
