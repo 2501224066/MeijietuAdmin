@@ -112,6 +112,8 @@ class UserController extends Controller
         $show->realname_status('实名认证')->as(function ($realname_status) {
             return User::REALNAME_STATUS[$realname_status];
         })->label();
+        $show->domain('域名');
+        $show->authorize_maturity('授权截止');
         $show->ip('最后一次登录IP');
         $show->status('状态')->as(function ($status) {
             return User::STATUS[$status];
@@ -176,19 +178,20 @@ class UserController extends Controller
         $form->text('phone', '电话')->required();
         $form->text('password', '密码')->required();
         $form->email('email', '邮箱')->required();
-        $form->image('head_portrait', '头像')->name(function ($file) {
-            return "head_portrait/" . str_random(30) . "." . $file->guessExtension();
-        });
-        $form->select('sex', '性别')->options(User::SEX);
-        $form->date('birth', '生日');
         $form->text('qq_ID', 'QQ号')->required();
-        $form->text('weixin_ID', '微信号');
-        $form->select('identity', '身份')->options(User::IDENTITY)->value(3)->readonly();
-        $form->select('realname_status', '实名认证')->options(User::REALNAME_STATUS)->value(0)->readonly();
+        $form->select('identity', '身份')->options(User::IDENTITY)->required();
+        $form->hidden('realname_status', '实名认证')->options(User::REALNAME_STATUS)->value(0)->readonly();
         $form->hidden('ip', 'IP')->value(Input::getClientIp());
         $form->select('status', '状态')->options(User::STATUS)->value(1);
         $form->display('created_at', '创建时间');
         $form->display('updated_at', '修改时间');
+        $form->image('head_portrait', '头像')->name(function ($file) {
+            return "head_portrait/" . str_random(30) . "." . $file->guessExtension();
+        });
+        $form->text('domain', '域名 (代理)');
+        $form->date('authorize_maturity', '授权截止 (代理)');
+        $form->select('sex', '性别')->options(User::SEX);
+        $form->text('weixin_ID', '微信号');
         $form->tools(function (Form\Tools $tools) {
             $tools->disableDelete();
         });

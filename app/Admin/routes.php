@@ -21,6 +21,10 @@ Route::group([
     $router->resource('/data/goods_price', Data\GoodsPriceController::class);
     //  订单数据
     $router->resource('/data/indent', Data\IndentController::class);
+    //  套餐池
+    $router->resource('/data/mealpool', Data\MealPoolController::class);
+    //  套餐需求
+    $router->resource('/data/demand', Data\DemandController::class);
 
     // 资金数据
     //  钱包资金

@@ -3,7 +3,6 @@
 
 namespace App\Admin\Controllers\Attr;
 
-
 use App\Http\Controllers\Controller;
 use App\Models\Attr\Fansnumlevel;
 use App\Models\Attr\Filed;

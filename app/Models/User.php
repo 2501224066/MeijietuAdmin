@@ -73,18 +73,19 @@ class User extends Model
     const GF_SELLER = 1;
 
     // 官方买家
-    const GF_BUYER = 2;
+    // const GF_BUYER = 2;
 
     const IDENTITY = [
-        "1" => "广告主",
-        "2" => "媒体主",
-        "3" => "业务员"
+        1 => "广告主",
+        2 => "媒体主",
+        3 => "业务员",
+        4 => "代理"
     ];
 
     const REALNAME_STATUS = [
-        "0" => "未认证",
-        "1" => "个人认证",
-        "2" => "企业认证"
+        0 => "未认证",
+        1 => "个人认证",
+        2 => "企业认证"
     ];
 
     const STATUS = [

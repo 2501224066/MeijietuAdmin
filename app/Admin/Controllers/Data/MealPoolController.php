@@ -1,22 +1,21 @@
 <?php
 
 
-namespace App\Admin\Controllers\Log;
+namespace App\Admin\Controllers\Data;
 
 
 use App\Http\Controllers\Controller;
-use App\Models\Log\FailedJobs;
-use App\Models\Pay\Runwater;
+use App\Models\Data\MealPool;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
 
-class FailedJobsController extends Controller
+class MealPoolController extends Controller
 {
     use HasResourceActions;
 
-    public $header = '失败队列';
+    public $header = '套餐池';
 
     public function index(Content $content)
     {
@@ -36,39 +35,38 @@ class FailedJobsController extends Controller
 
     public function grid()
     {
-        $grid = new Grid(new FailedJobs);
+        $grid = new Grid(new MealPool);
 
-        $grid->model()->orderBy('id', 'desc');
+        $grid->model()->wherePid(0);
         $grid->id('ID')->sortable();
-        $grid->connection('连接');
-        $grid->queue('队列');
-        $grid->failed_at('失败时间');
-        $grid->filter(function ($filter) {
-            $filter->disableIdFilter();
-            $filter->date('failed_id', '失败时间');
-        });
+        $grid->pool_name('池名称');
         $grid->actions(function ($actions) {
             $actions->disableDelete();
             $actions->disableEdit();
         });
         $grid->disableExport();
+        $grid->disableFilter();
         $grid->disableRowSelector();
         $grid->disableCreateButton();
 
         return $grid;
     }
 
-    public function detail($id)
+    protected function detail($id)
     {
-        $show = new Show(FailedJobs::findOrFail($id));
+        $show = new Show(MealPool::findOrFail($id));
 
-        $show->id('ID');
-        $show->connection('连接');
-        $show->payload('负载');
-        $show->exception('错误');
-        $show->connection('连接');
-        $show->queue('队列');
-        $show->failed_at('失败时间');
+        $show->pool_name('池名称');
+        $show->id('包含商品')->unescape()->as(function ($id) {
+            $data = MealPool::wherePid($id)
+                ->get(['goods_id', 'title']);
+            $h    = '<table class="table"><tr><th class="font-weight:600">商品ID</th><th class="font-weight:600">商品名称</th>';
+            foreach ($data as $d) {
+                $h .= '<tr><td>' . $d->goods_id . '</td>' .
+                    '<td>' . $d->title . '</td></tr>';
+            }
+            return $h . "</table>";
+        });
         $show->panel()->tools(function ($tools) {
             $tools->disableDelete();
             $tools->disableEdit();
