@@ -25,6 +25,8 @@ Route::group([
     $router->resource('/data/mealpool', Data\MealPoolController::class);
     //  套餐需求
     $router->resource('/data/demand', Data\DemandController::class);
+    //  消息通知
+    $router->resource('/data/news', Data\NewsController::class);
 
     // 资金数据
     //  钱包资金

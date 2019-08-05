@@ -60,7 +60,7 @@ class MealPoolController extends Controller
         $show->id('包含商品')->unescape()->as(function ($id) {
             $data = MealPool::wherePid($id)
                 ->get(['goods_id', 'title']);
-            $h    = '<table class="table"><tr><th class="font-weight:600">商品ID</th><th class="font-weight:600">商品名称</th>';
+            $h    = '<table class="table table-bordered"><tr><th class="font-weight:600">商品ID</th><th class="font-weight:600">商品名称</th>';
             foreach ($data as $d) {
                 $h .= '<tr><td>' . $d->goods_id . '</td>' .
                     '<td>' . $d->title . '</td></tr>';

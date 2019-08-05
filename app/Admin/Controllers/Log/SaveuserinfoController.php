@@ -32,22 +32,15 @@ class SaveuserinfoController extends Controller
         $grid->log_saveuserinfo_id('ID')->sortable();
         $grid->uid('UID');
         $grid->ip('IP');
-        $grid->old_info('原信息')->display(function ($oldInfo){
-            $re = "";
-            foreach (json_decode($oldInfo, true) as $k => $v){
-                $re .= "<div>".$k.":"."$v"."</div>";
+        $grid->save_info('变动信息')->display(function ($save_info) {
+            $re = "<table class='table table-bordered'>";
+            foreach (json_decode($save_info, true) as $k => $v) {
+                $re .= "<tr><td>" . $k . "</td><td>" . "$v" . "</td></tr>";
             }
-            return $re;
-        });
-        $grid->new_info('新信息')->display(function ($newInfo){
-            $re = "";
-            foreach (json_decode($newInfo, true) as $k => $v){
-                $re .= "<div>".$k.":"."$v"."</div>";
-            }
-            return $re;
+            return $re . "</table>";
         });
         $grid->time_at('修改时间');
-        $grid->filter(function($filter){
+        $grid->filter(function ($filter) {
             $filter->disableIdFilter();
             $filter->like('uid', 'UID');
             $filter->like('time_at', '修改时间');

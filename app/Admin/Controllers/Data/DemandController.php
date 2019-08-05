@@ -26,7 +26,7 @@ class DemandController extends Controller
 
     public function grid()
     {
-        $grid = new Grid(new Demand());
+        $grid = new Grid(new Demand);
 
         $grid->model()->orderBy('demands_id', 'desc');
         $grid->demand_id('需求ID')->sortable();
