@@ -56,7 +56,8 @@ class NewsController extends Controller
         });
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
-            $filter->like('content', '消息标题');
+            $filter->like('content', '消息内容');
+            $filter->equal('status', '状态')->select(News::STATUS);
         });
         $grid->disableExport();
         $grid->disableRowSelector();
