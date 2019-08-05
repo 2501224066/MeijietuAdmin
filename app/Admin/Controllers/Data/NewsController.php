@@ -49,14 +49,14 @@ class NewsController extends Controller
 
         $grid->model()->orderBy('news_id', 'DESC');
         $grid->news_id('消息ID')->sortable();
-        $grid->title('消息标题');
+        $grid->content('消息内容');
         $grid->release_time('发布日期');
         $grid->status('状态')->display(function ($status) {
             return labelColor($status, News::STATUS);
         });
         $grid->filter(function ($filter) {
             $filter->disableIdFilter();
-            $filter->like('title', '消息标题');
+            $filter->like('content', '消息标题');
         });
         $grid->disableExport();
         $grid->disableRowSelector();
@@ -69,7 +69,6 @@ class NewsController extends Controller
     {
         $show = new Show(News::findOrFail($id));
 
-        $show->title('消息标题');
         $show->content('消息内容');
         $show->release_time('发布日期');
         $show->status('状态')->as(function ($status) {
@@ -88,8 +87,7 @@ class NewsController extends Controller
     {
         $form = new Form(new News);
 
-        $form->text('title', '消息标题');
-        $form->markdown('content', '消息内容');
+        $form->text('content', '消息内容');
         $form->datetime('release_time', '发布日期');
         $form->select('status', '状态')->options(News::STATUS);
         $form->listbox('user', '拥有领域')->options(User::pluck('nickname', 'uid'));
