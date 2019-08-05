@@ -87,10 +87,10 @@ class NewsController extends Controller
     {
         $form = new Form(new News);
 
-        $form->text('content', '消息内容');
+        $form->markdown('content', '消息内容');
         $form->datetime('release_time', '发布日期');
         $form->select('status', '状态')->options(News::STATUS);
-        $form->listbox('user', '拥有领域')->options(User::pluck('nickname', 'uid'));
+        $form->listbox('user', '通知对象')->options(User::pluck('nickname', 'uid'));
         $form->tools(function (Form\Tools $tools) {
             $tools->disableDelete();
             $tools->disableView();
