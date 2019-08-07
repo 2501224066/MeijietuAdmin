@@ -28,7 +28,7 @@ class DemandController extends Controller
     {
         $grid = new Grid(new Demand);
 
-        $grid->model()->orderBy('demands_id', 'desc');
+        $grid->model()->orderBy('demand_id', 'desc');
         $grid->demand_id('需求ID')->sortable();
         $grid->demand_num('需求编号');
         $grid->bind_indent_id('绑定订单ID');
