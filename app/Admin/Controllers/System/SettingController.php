@@ -57,7 +57,7 @@ class SettingController
         $grid->setting_name('名称');
         $grid->about('介绍');
         $grid->value('值');
-        $grid->img('图片')->image();
+        $grid->img('图片');
         $grid->disableFilter();
         $grid->disableExport();
         $grid->disableRowSelector();
