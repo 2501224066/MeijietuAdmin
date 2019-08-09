@@ -71,6 +71,7 @@ class UserController extends Controller
         $grid->status('状态')->display(function ($status) {
             return labelColor($status, User::STATUS);
         });
+        $grid->created_at('入驻时间');
         $grid->actions(function ($actions) {
             $actions->disableDelete();
         });
