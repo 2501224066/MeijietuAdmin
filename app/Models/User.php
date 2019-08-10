@@ -58,6 +58,12 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereUserNum($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereWeixinID($value)
  * @mixin \Eloquent
+ * @property string|null $domain 域名
+ * @property string|null $authorize_maturity 授权截止日期
+ * @property string|null $agent_id 代理uid
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAgentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereAuthorizeMaturity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\User whereDomain($value)
  */
 class User extends Model
 {

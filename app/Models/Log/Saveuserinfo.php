@@ -25,6 +25,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Log\Saveuserinfo whereTimeAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Log\Saveuserinfo whereUid($value)
  * @mixin \Eloquent
+ * @property string $save_info 原信息
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Log\Saveuserinfo whereSaveInfo($value)
  */
 class Saveuserinfo extends Model
 {
