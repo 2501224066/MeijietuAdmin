@@ -179,7 +179,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         //AliOSS
-        Jacobcyl\AliOSS\AliOssServiceProvider::class
+        Jacobcyl\AliOSS\AliOssServiceProvider::class,
+        //Mongodb
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
     ],
 
@@ -229,7 +231,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
+        // Mongodb
+        'Mongo'     => Jenssegers\Mongodb\MongodbServiceProvider::class,
     ],
 
 ];

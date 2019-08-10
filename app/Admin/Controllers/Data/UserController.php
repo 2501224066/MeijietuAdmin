@@ -139,6 +139,7 @@ class UserController extends Controller
             $realnamePeople->bank_prov('开户省');
             $realnamePeople->bank_city('开户市');
             $realnamePeople->bank_card('银行卡号');
+            $realnamePeople->bank_band_phone('绑定手机号');
             $realnamePeople->created_at('created_at');
             $realnamePeople->updated_at('updated_at');
             $realnamePeople->panel()->tools(function ($tools) {
