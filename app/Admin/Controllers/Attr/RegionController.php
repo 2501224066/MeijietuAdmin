@@ -18,7 +18,7 @@ class RegionController extends Controller
 
     public $header = '地区分类';
 
-    public $jumpUrl = 'tb/region';
+    public $jumpUrl = 'attr/region';
 
     public function index(Content $content)
     {

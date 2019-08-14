@@ -17,7 +17,7 @@ class PriceclassifyController extends Controller
 
     public $header = '价格种类';
 
-    public $jumpUrl = 'tb/priceclassify';
+    public $jumpUrl = 'attr/priceclassify';
 
     public function index(Content $content)
     {

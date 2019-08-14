@@ -18,7 +18,7 @@ class IndustryController extends Controller
 
     public $header = '行业';
 
-    public $jumpUrl = 'tb/industry';
+    public $jumpUrl = 'attr/industry';
 
     public function index(Content $content)
     {

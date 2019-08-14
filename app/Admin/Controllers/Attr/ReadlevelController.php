@@ -17,7 +17,7 @@ class ReadlevelController
 
     public $header = '平均阅读量级';
 
-    public $jumpUrl = 'tb/readlevel';
+    public $jumpUrl = 'attr/readlevel';
 
     public function index(Content $content)
     {

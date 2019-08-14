@@ -17,7 +17,7 @@ class PlatformController extends Controller
 
     public $header = '平台';
 
-    public $jumpUrl = 'tb/platform';
+    public $jumpUrl = 'attr/platform';
 
     public function index(Content $content)
     {

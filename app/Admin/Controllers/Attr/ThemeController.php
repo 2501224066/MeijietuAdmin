@@ -28,7 +28,7 @@ class ThemeController extends Controller
 
     public $header = '主题';
 
-    public $jumpUrl = 'tb/theme';
+    public $jumpUrl = 'attr/theme';
 
     public function index(Content $content)
     {

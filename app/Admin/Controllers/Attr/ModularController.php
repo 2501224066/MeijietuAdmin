@@ -20,7 +20,7 @@ class ModularController extends Controller
 
     public $header = '模块';
 
-    public $jumpUrl = 'tb/modular';
+    public $jumpUrl = 'attr/modular';
 
     public function index(Content $content)
     {

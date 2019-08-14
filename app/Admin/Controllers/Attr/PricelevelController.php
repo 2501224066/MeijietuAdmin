@@ -18,7 +18,7 @@ class PricelevelController extends Controller
 
     public $header = '价格量级';
 
-    public $jumpUrl = 'tb/pricelevel';
+    public $jumpUrl = 'attr/pricelevel';
 
     public function index(Content $content)
     {

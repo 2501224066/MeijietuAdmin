@@ -18,7 +18,7 @@ class WeightlevelController extends Controller
 
     public $header = '权重等级';
 
-    public $jumpUrl = 'tb/weightlevel';
+    public $jumpUrl = 'attr/weightlevel';
 
     public function index(Content $content)
     {

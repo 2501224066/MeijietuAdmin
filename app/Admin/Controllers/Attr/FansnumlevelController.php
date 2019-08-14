@@ -18,7 +18,7 @@ class FansnumlevelController extends Controller
 
     public $header = '粉丝量级';
 
-    public $jumpUrl = 'tb/fansnumlevel';
+    public $jumpUrl = 'attr/fansnumlevel';
 
     public function index(Content $content)
     {

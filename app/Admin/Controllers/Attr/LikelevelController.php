@@ -17,7 +17,7 @@ class LikelevelController extends Controller
 
     public $header = '平均点赞量级';
 
-    public $jumpUrl = 'tb/likelevel';
+    public $jumpUrl = 'attr/likelevel';
 
     public function index(Content $content)
     {

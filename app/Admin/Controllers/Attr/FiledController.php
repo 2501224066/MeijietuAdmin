@@ -16,7 +16,7 @@ class FiledController extends Controller
 
     public $header = '领域';
 
-    public $jumpUrl = 'tb/filed';
+    public $jumpUrl = 'attr/filed';
 
     public function index(Content $content)
     {
