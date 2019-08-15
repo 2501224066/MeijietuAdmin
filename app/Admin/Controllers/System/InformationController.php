@@ -5,7 +5,7 @@ namespace App\Admin\Controllers\System;
 
 
 use App\Http\Controllers\Controller;
-use App\Models\System\information;
+use App\Models\System\Information;
 use Encore\Admin\Controllers\HasResourceActions;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
@@ -52,7 +52,7 @@ class InformationController extends Controller
 
     public function grid()
     {
-        $grid = new Grid(new information);
+        $grid = new Grid(new Information);
 
         $grid->model()->orderBy('information_id', 'desc');
         $grid->information_id('资讯ID')->sortable();
@@ -68,7 +68,7 @@ class InformationController extends Controller
 
     public function detail($id)
 {
-    $show = new Show(information::findOrFail($id));
+    $show = new Show(Information::findOrFail($id));
 
     $show->information_id('资讯ID');
     $show->title('标题');
@@ -87,7 +87,7 @@ class InformationController extends Controller
 
     public function form()
     {
-        $form = new Form(new information);
+        $form = new Form(new Information);
 
         $form->text('information_id','资讯ID')->readOnly();
         $form->text('title','标题')->required();
