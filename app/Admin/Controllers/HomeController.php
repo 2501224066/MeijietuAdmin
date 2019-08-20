@@ -62,7 +62,8 @@ class HomeController extends Controller
         $chart = 'count_day';
 
         $data     = [];
-        $CountDay = Day::offset(0)->limit(10)->get();
+        $count = Day::count();
+        $CountDay = Day::offset($count-30)->limit(30)->get();
         foreach ($CountDay as $d) {
             $data['time'][]     = substr($d['time'], 0, 10);
             $data['register'][] = $d['register'];
