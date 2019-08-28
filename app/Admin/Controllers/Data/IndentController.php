@@ -125,7 +125,7 @@ class IndentController extends Controller
             $indnet_item->modular_name('模块名称');
             $indnet_item->theme_name('主题名称');
             $indnet_item->priceclassify_name('价格种类');
-            $indnet_item->goods_price('单格');
+            $indnet_item->goods_price('单价');
             $indnet_item->goods_count('数量');
             $indnet_item->goods_amount('总价');
             $indnet_item->create_time('创建时间');

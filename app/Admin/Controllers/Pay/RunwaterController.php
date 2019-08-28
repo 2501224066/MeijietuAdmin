@@ -7,6 +7,7 @@ namespace App\Admin\Controllers\Pay;
 use App\Http\Controllers\Controller;
 use App\Models\Pay\Runwater;
 use Encore\Admin\Controllers\HasResourceActions;
+use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Layout\Content;
 use Encore\Admin\Show;
@@ -23,6 +24,14 @@ class RunwaterController extends Controller
             ->header($this->header)
             ->description('列表')
             ->body($this->grid());
+    }
+
+    public function edit($id, Content $content)
+    {
+        return $content
+            ->header($this->header)
+            ->description('编辑')
+            ->body($this->form()->edit($id));
     }
 
     public function show($id, Content $content)
@@ -67,7 +76,6 @@ class RunwaterController extends Controller
         });
         $grid->actions(function ($actions) {
             $actions->disableDelete();
-            $actions->disableEdit();
         });
         $grid->disableExport();
         $grid->disableRowSelector();
@@ -109,5 +117,38 @@ class RunwaterController extends Controller
         });
 
         return $show;
+    }
+
+    public function form()
+    {
+        $form = new Form(new Runwater);
+
+        /*$form->text('runwater_id', '流水ID');
+        $form->text('runwater_num', '流水单号');
+        $form->text('from_uid', '来源');
+        $form->text('to_ui', '去向');
+        $form->text('money', '金额');
+        $form->text('pay_type', '支付方式');
+        $form->select('type', '类型')->options(Runwater::TYPE);
+        $form->select('direction', '方向')->options(Runwater::DIRECTION);*/
+        $form->select('status', '状态')->options(Runwater::STATUS);
+        /*$form->text('indent_id', '订单ID');
+        $form->text('indent_num', '订单编号');
+        $form->datetime('callback_time', '回调时间');
+        $form->datetime('callback_success_time', '充值时间');
+        $form->text('callback_trade_no', '交易凭证');
+        $form->number('callback_money_order', '交易金额');
+        $form->datetime('created_at', '创建时间');
+        $form->datetime('updated_at', '修改时间');*/
+        $form->tools(function (Form\Tools $tools) {
+            $tools->disableDelete();
+        });
+        $form->footer(function ($footer) {
+            $footer->disableViewCheck();
+            $footer->disableEditingCheck();
+            $footer->disableCreatingCheck();
+        });
+
+        return $form;
     }
 }
