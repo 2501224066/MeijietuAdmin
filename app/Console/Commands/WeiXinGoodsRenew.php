@@ -44,7 +44,7 @@ class weiXinGoodsRenew extends Command
             }
 
 
-            $goods = Goods::where('weixin_ID', $v['OfficialAccount_ID'])->first(); // 唯一标识
+            $goods = Goods::where('title', $v['OfficialAccount_Name'])->first(); // 唯一标识
             // 存在即更新数据
             if ($goods) {
                 echo " " . $goods->goods_id . " renew\n";
@@ -69,7 +69,7 @@ class weiXinGoodsRenew extends Command
                         'title'           => $v['BasicInfo']['OfficialAccount_Name'],
                         'html_title'      => $v['BasicInfo']['OfficialAccount_Name'],
                         'title_about'     => $v['BasicInfo']['Description'],
-                        'weixin_ID'       => $v['OfficialAccount_ID'],
+                        //'weixin_ID'       => ,
                         'qq_ID'           => '2501001001',
                         'modular_id'      => 1,
                         'modular_name'    => '微信营销',

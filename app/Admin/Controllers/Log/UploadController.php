@@ -63,10 +63,12 @@ class UploadController extends Controller
         $form = new Form(new Upload);
 
         $form->text('uid', 'UID')->readOnly()->value(User::GF_SELLER);
-        $form->text('upload_type', '上传类型')->readOnly()->value('后台图片');
+        $form->text('upload_type', '上传类型')->readOnly()->value('后台上传');
         $form->display('created_at', '上传时间');
-        $form->image('file', '文件')->name(function ($file) {
-            return "admin_img/" . str_random(30) . "." . $file->guessExtension();
+        $form->file('file', '文件')->name(function ($file) {
+            $arr = explode(".", $file->getClientOriginalName());
+            $type = $arr[count($arr)-1];
+            return "admin_upload/" . str_random(30) . "." . $type;
         })->required();
         $form->footer(function ($footer) {
             $footer->disableViewCheck();
