@@ -73,11 +73,12 @@ class SEOController extends Controller
         $show->goods_id('商品ID')->sortable();
         $show->title('SEO名称');
         $show->title_about('SEO简介');
+        $show->theme_name("主题名称");
         $show->content("SEO内容");
         $show->modular_id("模块ID");
         $show->modular_name("模块名称");
         $show->theme_id("主题ID");
-        $show->theme_name("主题名称");
+        $show->avatar_url("主题图片")->image();
         $show->filed_id("领域ID");
         $show->filed_name("领域名称");
         $show->verify_status('审核状态')->as(function ($verify_status) {
@@ -110,6 +111,9 @@ class SEOController extends Controller
 
         $form->text('title', 'SEO名称')->required();
         $form->text('title_about', 'SEO简介')->required();
+        $form->image('avatar_url', '主题图片')->name(function ($file) {
+            return "head_portrait/" . str_random(30) . "." . $file->guessExtension();
+        })->required();
         $form->markdown('content', '文章内容')->required();
         $Data     = Theme::whereThemeName('SEO')->with(['modular', 'priceclassify', 'filed'])->first();
         $filedArr = [];
@@ -140,7 +144,7 @@ class SEOController extends Controller
         });
         $form->saved(function (Form $form) {
             // 设置filed_name
-            $goods_num            = $form->model()->goods_num;
+            $goods_num         = $form->model()->goods_num;
             $goods             = Goods::whereGoodsNum($goods_num)->first();
             $goods->filed_name = Filed::whereFiledId($goods->filed_id)->value('filed_name');
             $goods->save();
