@@ -62,6 +62,8 @@ class IndentInfo extends Model
 
     protected $primaryKey = 'indent_id';
 
+    public $timestamps = false;
+
     protected $guarded = [];
 
     const BARGAINING_STATUS = [
